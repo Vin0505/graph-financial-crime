@@ -1,0 +1,36 @@
+
+# Python environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Dataset files and generated data
+data/
+*.csv
+*.parquet
+*.feather
+
+# Model checkpoints and generated artifacts
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.joblib
+
+# Experiment databases and logs
+mlruns/
+mlflow.db
+*.sqlite
+*.sqlite3
+
+# Local editor and OS files
+.vscode/
+
