@@ -1,0 +1,58 @@
+
+dataset:
+  name: elliptic
+  min_timestep: 1
+  max_timestep: 49
+
+labels:
+  illicit: "1"
+  licit: "2"
+  unknown: "unknown"
+  unknown_in_supervised_loss: false
+  unknown_in_labelled_evaluation: false
+
+features:
+  exclude_timestep_from_primary_model_inputs: true
+  local_feature_count: 93
+  supplied_neighbour_aggregate_feature_count: 72
+  all_feature_count: 165
+
+tuning:
+  fit:
+    start: 1
+    end: 24
+  validation:
+    start: 25
+    end: 29
+
+track_a:
+  fit:
+    start: 1
+    end: 30
+  validation:
+    start: 31
+    end: 34
+  test:
+    start: 35
+    end: 49
+
+track_b:
+  - name: cutoff_34
+    fit: [1, 30]
+    validation: [31, 34]
+    test: [35, 38]
+
+  - name: cutoff_38
+    fit: [1, 34]
+    validation: [35, 38]
+    test: [39, 42]
+
+  - name: cutoff_42
+    fit: [1, 38]
+    validation: [39, 42]
+    test: [43, 46]
+
+  - name: cutoff_46
+    fit: [1, 42]
+    validation: [43, 46]
+    test: [47, 49]

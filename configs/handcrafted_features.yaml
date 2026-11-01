@@ -1,0 +1,26 @@
+
+feature_set:
+  name: Local+Hand
+  base_feature_set: Local
+
+graph:
+  source_column: txId1
+  target_column: txId2
+  respect_timestep_boundaries: true
+  use_labels: false
+
+features:
+  in_degree: true
+  out_degree: true
+
+  one_hop:
+    in_neighbour_mean: true
+    out_neighbour_mean: true
+
+  two_hop:
+    neighbour_mean: true
+
+aggregation:
+  statistic: mean
+  include_self: false
+  zero_neighbour_policy: zero
