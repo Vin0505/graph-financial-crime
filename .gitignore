@@ -1,4 +1,3 @@
-
 # Python environments
 .venv/
 venv/
@@ -34,3 +33,17 @@ mlflow.db
 # Local editor and OS files
 .vscode/
 
+# Generated Track B predictions
+reports/track_b_predictions/
+
+# Notebook execution checkpoints
+reports/notebook_checkpoints/
+
+# Keep experiment summaries and evaluation reports
+!reports/track_a/
+!reports/track_a/*.csv
+!reports/track_b/
+!reports/track_b/*.csv
+!reports/track_a_*.csv
+!reports/gnn_tuning_summary*.csv
+!reports/timestep_counts.csv

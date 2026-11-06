@@ -1,0 +1,12 @@
+model,feature_set,graph_protocol,runs,seeds
+gcn,Local,directed,5,7;21;42;123;2024
+graphsage,All,directed,5,7;21;42;123;2024
+graphsage,Local,directed,5,7;21;42;123;2024
+graphsage,Local,undirected,5,7;21;42;123;2024
+logistic_regression,All,tabular,1,42
+logistic_regression,Local,tabular,1,42
+random_forest,All,tabular,5,7;21;42;123;2024
+random_forest,Local,tabular,5,7;21;42;123;2024
+xgboost,All,tabular,5,7;21;42;123;2024
+xgboost,Local,tabular,5,7;21;42;123;2024
+xgboost,Local+Hand,tabular,5,7;21;42;123;2024

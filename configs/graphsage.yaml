@@ -1,0 +1,36 @@
+model:
+  name: graphsage
+
+training:
+  optimizer: adam
+  learning_rate: 0.001
+  weight_decay: 0.0
+  max_epochs: 400
+  patience: 20
+  min_delta: 0.0
+  class_weighting: balanced
+
+trials:
+  - name: hidden32_dropout03
+    hidden_channels: 32
+    dropout: 0.3
+
+  - name: hidden32_dropout04
+    hidden_channels: 32
+    dropout: 0.4
+
+  - name: hidden32_dropout05
+    hidden_channels: 32
+    dropout: 0.5
+
+  - name: hidden64_dropout03
+    hidden_channels: 64
+    dropout: 0.3
+
+  - name: hidden64_dropout04
+    hidden_channels: 64
+    dropout: 0.4
+
+  - name: hidden64_dropout05
+    hidden_channels: 64
+    dropout: 0.5
